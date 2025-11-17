@@ -1,0 +1,11 @@
+
+<svg width="500" height="350" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="350" rx="20" fill="#0f1720"/>
+<circle cx="150" cy="175" r="80" stroke="#00d1ff" stroke-width="8"/>
+<circle cx="150" cy="175" r="40" stroke="#7c5cff" stroke-width="6"/>
+<rect x="260" y="90" width="150" height="30" rx="6" fill="#00d1ff" opacity="0.8"/>
+<rect x="260" y="140" width="180" height="30" rx="6" fill="#7c5cff" opacity="0.8"/>
+<rect x="260" y="190" width="130" height="30" rx="6" fill="#00d1ff" opacity="0.8"/>
+<rect x="260" y="240" width="160" height="30" rx="6" fill="#7c5cff" opacity="0.8"/>
+<text x="135" y="182" fill="#e6eef6" font-size="22" font-family="Arial" font-weight="bold">MV</text>
+</svg>
