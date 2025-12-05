@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pricing — MarketVerse</title>
   <link rel="stylesheet" href="style.css">
+
+  <!--  NEW: Added JS file for animations, calculator, and interactions -->
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">Market<span>Verse</span></a>
+
       <nav class="nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -18,13 +23,16 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+
       <button class="btn small">Open Account</button>
       <button class="hamburger" aria-label="Open menu">☰</button>
     </div>
   </header>
 
   <main>
-    <section class="container page-section">
+
+    <!--  NEW: Added scroll reveal class for fade-in animation -->
+    <section class="container page-section scroll-reveal">
       <h1>Pricing</h1>
       <p class="lead">Simple, transparent pricing — no hidden fees.</p>
 
@@ -34,11 +42,13 @@
           <p class="price">₹0</p>
           <p class="muted">No brokerage on delivery trades.</p>
         </div>
+
         <div class="pricing-card">
           <h3>Intraday</h3>
           <p class="price">₹20 / trade</p>
           <p class="muted">Low flat fee for intraday trades.</p>
         </div>
+
         <div class="pricing-card">
           <h3>F&O</h3>
           <p class="price">₹20 / trade</p>
@@ -47,7 +57,9 @@
       </div>
 
       <h2 style="margin-top:2rem">Compare plans</h2>
-      <div class="compare-table">
+
+      <!--  NEW: Added class for scroll animation -->
+      <div class="compare-table scroll-reveal">
         <table>
           <thead>
             <tr>
@@ -56,6 +68,7 @@
               <th>Pro</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>Account</td>
@@ -80,6 +93,22 @@
           </tbody>
         </table>
       </div>
+
+
+      <!--  NEW: Added Brokerage Calculator (JS Feature #4) -->
+      <div class="calc-box scroll-reveal" style="margin-top: 3rem;">
+        <h3>Brokerage Calculator</h3>
+
+        <!-- User input -->
+        <input type="number" id="tradeCount" placeholder="Trades per month">
+
+        <!-- Button triggers JS function calculateBrokerage() -->
+        <button class="btn primary" onclick="calculateBrokerage()">Calculate</button>
+
+        <!-- Result will appear here -->
+        <p id="calcResult" class="muted"></p>
+      </div>
+
     </section>
   </main>
 
@@ -89,6 +118,7 @@
         <a class="logo" href="index.html">Market<span>Verse</span></a>
         <p class="muted">© MarketVerse 2025</p>
       </div>
+
       <div>
         <h4>Quick links</h4>
         <ul class="footer-links">
@@ -96,12 +126,14 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
+
       <div>
         <h4>Contact</h4>
-        <p class ="muted">developer: Atharva Chiddarwar</p>
+        <p class="muted">developer: Atharva Chiddarwar</p>
         <p class="muted">mentor: Rahul Kumar sir</p>
       </div>
     </div>
   </footer>
+
 </body>
 </html>

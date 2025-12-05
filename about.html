@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — MarketVerse</title>
   <link rel="stylesheet" href="style.css">
+
+  <!--  NEW: Added JavaScript file for scroll animations + form validation -->
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">Market<span>Verse</span></a>
+
       <nav class="nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -18,42 +23,69 @@
           <li><a href="about.html" class="active">About</a></li>
         </ul>
       </nav>
+
       <button class="btn small">Contact</button>
       <button class="hamburger" aria-label="Open menu">☰</button>
     </div>
   </header>
 
   <main>
-    <section class="container page-section">
+
+    <!--  NEW: Added scroll reveal class for fade-in animation effect -->
+    <section class="container page-section scroll-reveal">
+
       <h1>About MarketVerse</h1>
-      <p class="lead">MarketVerse is a student capstone project inspired by modern trading platforms. Built for learning and presentation in the SNW Capstone (Mentor: Rahul Kumar).</p>
+      <p class="lead">
+        MarketVerse is a student capstone project inspired by modern trading platforms.
+        Built for learning and presentation in the SNW Capstone (Mentor: Rahul Kumar).
+      </p>
 
       <div class="two-col">
+
         <div>
           <h3>Our mission</h3>
           <p>To make investing accessible and intuitive for everyone. This project focuses on clean UX, simple pricing and clear product information.</p>
 
           <h3>Team & Mentor</h3>
           <p>Developed by Atharva Chiddarwar as a part of the SNW capstone. Mentor: Rahul Kumar sir, Newton School of Technology.</p>
+        </div>
 
+      </div>
+
+      <!-- 
+         NEW: Added scroll animation 
+         NEW: Added ID for form result message 
+        Required for JavaScript Feature #6 (Form Validation)
+      -->
       <h3>Contact</h3>
-      <form class="contact-form" novalidate>
+
+      <!--  FIXED: Missing closing div earlier -->
+      <form class="contact-form scroll-reveal" novalidate>
         <label>
           Name
           <input type="text" placeholder="Your name">
         </label>
+
         <label>
           Email
           <input type="email" placeholder="you@example.com">
         </label>
+
         <label>
           Message
           <textarea rows="4" placeholder="Message"></textarea>
         </label>
-        <div class="center"><button class="btn primary">Send Message</button></div>
+
+        <div class="center">
+          <button class="btn primary">Send Message</button>
+        </div>
       </form>
 
+      <!--  NEW: Added message output area for JS validation -->
+      <p id="formResult" class="muted"></p>
+
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -62,6 +94,7 @@
         <a class="logo" href="index.html">Market<span>Verse</span></a>
         <p class="muted">© MarketVerse 2025</p>
       </div>
+
       <div>
         <h4>Quick links</h4>
         <ul class="footer-links">
@@ -69,12 +102,14 @@
           <li><a href="pricing.html">Pricing</a></li>
         </ul>
       </div>
+
       <div>
         <h4>Contact</h4>
-        <p class ="muted">developer: Atharva Chiddarwar</p>
+        <p class="muted">developer: Atharva Chiddarwar</p>
         <p class="muted">mentor: Rahul Kumar sir</p>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
