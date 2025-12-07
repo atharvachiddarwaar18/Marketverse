@@ -1,6 +1,6 @@
-/*********************************************
+/*
   FEATURE  — SCROLL ANIMATIONS
-*********************************************/
+*/
 const scrollElements = document.querySelectorAll(".scroll-reveal");
 
 const scrollObserver = new IntersectionObserver((entries) => {
@@ -15,9 +15,9 @@ const scrollObserver = new IntersectionObserver((entries) => {
 scrollElements.forEach(el => scrollObserver.observe(el));
 
 
-/*********************************************
+/*
   FEATURE  — PRICE CALCULATOR (BROKERAGE ESTIMATOR)
-*********************************************/
+*/
 function calculateBrokerage() {
   const trades = document.getElementById("tradeCount").value;
   const result = document.getElementById("calcResult");
@@ -32,9 +32,9 @@ function calculateBrokerage() {
 }
 
 
-/*********************************************
+/*
   FEATURE  — CARD HOVER INTERACTIVITY
-*********************************************/
+*/
 document.querySelectorAll(".product-card").forEach(card => {
   card.addEventListener("mouseenter", () => {
     card.classList.add("card-active");
@@ -45,9 +45,9 @@ document.querySelectorAll(".product-card").forEach(card => {
 });
 
 
-/*********************************************
+/*
   FEATURE  — CONTACT FORM VALIDATION
-*********************************************/
+*/
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form");
 
@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*********************************************
+/*
   FEATURE  — ROTATION CONTROLS FOR HERO IMAGE
-*********************************************/
+*/
 const rotator = document.querySelector(".rotate-y");
 
 if (rotator) {
@@ -102,9 +102,9 @@ if (rotator) {
   });
 }
 
-/*********************************************
-  FEATURE 5 — HOVER EFFECT FOR WHY CARDS (NEW)
-*********************************************/
+/*
+  FEATURE  — HOVER EFFECT FOR WHY CARDS (NEW)
+*/
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("mouseenter", () => {
     card.classList.add("card-active");  // <-- same animation class as product cards
@@ -112,4 +112,51 @@ document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("mouseleave", () => {
     card.classList.remove("card-active");
   });
+});
+
+/* 
+FEATURE  — TESTIMONIALS SLIDER 
+*/
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const dots = document.querySelectorAll(".testimonial-dots .dot");
+  const prevBtn = document.querySelector(".testimonial-prev");
+  const nextBtn = document.querySelector(".testimonial-next");
+
+  if (slides.length === 0) return; // Slider not found
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+    currentIndex = index;
+  }
+
+  prevBtn?.addEventListener("click", () => {
+    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(newIndex);
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    const newIndex = (currentIndex + 1) % slides.length;
+    showSlide(newIndex);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = Number(dot.dataset.index);
+      showSlide(index);
+    });
+  });
+
+  // Auto slide
+  setInterval(() => {
+    const newIndex = (currentIndex + 1) % slides.length;
+    showSlide(newIndex);
+  }, 4000);
 });

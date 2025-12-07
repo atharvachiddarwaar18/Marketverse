@@ -4,15 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MarketVerse — Invest Smart</title>
+
   <link rel="stylesheet" href="style.css">
 
-   <!-- NEW: linking JavaScript features -->
+  <!-- Java Script added -->
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="logo" href="index.html">Market<span>Verse</span></a>
 
       <nav class="nav">
@@ -20,18 +22,20 @@
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
 
-      <button class="btn small">Get Started</button>
+      <a href="login.html" class="btn small outline">Login</a>
       <button class="hamburger" aria-label="Open menu">☰</button>
+
     </div>
   </header>
 
   <main>
 
-    <!--  NEW: scroll animation class added -->
+    <!-- HERO SECTION -->
     <section class="hero scroll-reveal">
       <div class="container hero-grid">
 
@@ -54,17 +58,16 @@
         </div>
 
         <div class="hero-visual">
-          <!--  Updated: added class rotate-y for JS + CSS animation control -->
+          <!-- IMG animation -->
           <img src="image.svg" alt="Market illustration" class="rotate-y">
         </div>
 
       </div>
     </section>
 
-    <!--  NEW: fade-in scroll animation -->
+    <!-- WHY MARKETVERSE section -->
     <section class="why container scroll-reveal">
       <h2>Why MarketVerse</h2>
-
       <div class="cards">
         <article class="card">
           <h3>Low fees</h3>
@@ -83,13 +86,11 @@
       </div>
     </section>
 
-    <!--  NEW: scroll animation added to products section -->
+    <!-- PRODUCTS PREVIEW -->
     <section class="products-preview container scroll-reveal">
       <h2>Products</h2>
 
       <div class="grid-4">
-        
-        <!--  Product cards automatically get interactive JS hover effect -->
         <div class="product-card">
           <h4>Stocks</h4>
           <p>Buy & sell Indian equities with instant order placement.</p>
@@ -109,7 +110,6 @@
           <h4>IPOs</h4>
           <p>Apply to new listings and manage allotments with ease.</p>
         </div>
-
       </div>
 
       <div class="center">
@@ -117,10 +117,46 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS  -->
+    <section class="container page-section scroll-reveal">
+      <h2>What our users say</h2>
+
+      <div class="testimonial-slider">
+
+        <div class="testimonial-slide active">
+          <p class="testimonial-text">“MarketVerse made understanding brokerage much easier.”</p>
+          <p class="testimonial-author">— Student Trader</p>
+        </div>
+
+        <div class="testimonial-slide">
+          <p class="testimonial-text">“I love the clean UI and transparent pricing.”</p>
+          <p class="testimonial-author">— Design Enthusiast</p>
+        </div>
+
+        <div class="testimonial-slide">
+          <p class="testimonial-text">“A great example of frontend development in practice.”</p>
+          <p class="testimonial-author">— Faculty Reviewer</p>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-prev">◀</button>
+          <button class="testimonial-next">▶</button>
+        </div>
+
+        <div class="testimonial-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
+
       <div>
         <a class="logo" href="index.html">Market<span>Verse</span></a>
         <p class="muted">© MarketVerse 2025. All Rights Reserved.</p>
@@ -131,6 +167,7 @@
         <ul class="footer-links">
           <li><a href="products.html">Products</a></li>
           <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
@@ -141,6 +178,7 @@
         <p class="muted">mentor: Rahul Kumar sir</p>
         <p class="muted">Newton School of Technology</p>
       </div>
+
     </div>
   </footer>
 
